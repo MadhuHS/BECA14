@@ -1,71 +1,73 @@
 package encapsulation;
 
 //Entity
-class User
-{
-   private int    UID = 0;//create
-   private long   aadhar;//create , view
-   private String name;//create , update , view
-   private String email;//create , update , view
-   private String pwd;//create , update
-   private long   mob;//create , update , view
-   
-   public void setUid(int UID)//create
-   {
-	   if(this.UID == 0)
-	   {
-	     this.UID = UID; 
-	   }
-	   else
-	   {
-		  System.out.println("UID already created and CANNOT be MODIFIED");
-	   }
-   }
-   
-   public void setAadhar(long aadhar)//create
-   {
-	  if(this.aadhar == 0)
-	  {
-	   this.aadhar = aadhar;
-	  }
-	  else
-	  {
-		  System.out.println("Aadhar already created and CANNOT be MODIFIED"); 
-	  }
-   }
-   
-   public long getAadhar()
-   {
-	   return this.aadhar;
-   }
-   
-   
+class User {
+	private int UID = 0;// create
+	private long aadhar;// create , view
+	private String name;// create , update , view
+	private String email;// create , update , view
+	private String pwd;// create , update
+	private long mob;// create , update , view
+
+	public User(int uID, long aadhar, String name, String email, String pwd, long mob) {
+		super();
+		UID = uID;
+		this.aadhar = aadhar;
+		this.name = name;
+		this.email = email;
+		this.pwd = pwd;
+		this.mob = mob;
+	}
+
+	
+	public void setUID(int uID) {
+		UID = uID;
+	}
+
+	public long getAadhar() {
+		return aadhar;
+	}
+
+	public void setAadhar(long aadhar) {
+		this.aadhar = aadhar;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public void setPwd(String pwd) {
+		this.pwd = pwd;
+	}
+
+	public long getMob() {
+		return mob;
+	}
+
+	public void setMob(long mob) {
+		this.mob = mob;
+	}
+
 }
 
+public class Mainclass {
+	public static void main(String[] args) {
+		System.out.println("Program starts...");
 
-public class Mainclass 
-{
-	public static void main(String[] args) 
-	{
-	   System.out.println("Program starts...");
-      
-	   User u1 = new User();
-       u1.setUid(1234);//create
-       u1.setUid(7190);//update
-       
-       u1.setAadhar(978198291122l);//create
-       u1.setAadhar(290198291231l);//update
-       
-       long aadhar = u1.getAadhar();//view
-       System.out.println(aadhar);
-       
-       System.out.println("Program ends...");
+		
+
+		System.out.println("Program ends...");
 	}
 }
-
-
-
-
-
-
-
